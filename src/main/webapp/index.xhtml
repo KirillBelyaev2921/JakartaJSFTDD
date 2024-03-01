@@ -10,7 +10,15 @@
         <title>Start page</title>
     </h:head>
     <h:body>
-
+        <h:form>
+            <h:outputLabel value="Start" for="start"/>
+            <h:inputText id="start" value="#{functionBean.parameters.start}"/>
+            <h:outputLabel value="End" for="end"/>
+            <h:inputText id="end" value="#{functionBean.parameters.end}"/>
+            <h:outputLabel value="Step" for="step"/>
+            <h:inputText id="step" value="#{functionBean.parameters.step}"/>
+            <h:commandButton value="Calculate" action="#{functionBean.calculate()}"/>
+        </h:form>
     </h:body>
 </f:view>
 </html>
