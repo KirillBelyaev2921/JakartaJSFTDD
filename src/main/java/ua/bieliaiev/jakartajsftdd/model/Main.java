@@ -33,7 +33,7 @@ public class Main {
 	}
 
 	public int getCountOfSteps(double step, double start, double end) {
-		return ((int) ((end - start) / step)) + 1;
+		return (int)(Math.round((end - start) / step)) + 1;
 	}
 
 	public FunctionResult getFunctionValuesByDiapason(double step, double start, double end) {

@@ -11,13 +11,15 @@
     </h:head>
     <h:body>
         <h:form>
-            <h:outputLabel value="Start" for="start"/>
-            <h:inputText id="start" value="#{functionBean.parameters.start}"/>
-            <h:outputLabel value="End" for="end"/>
-            <h:inputText id="end" value="#{functionBean.parameters.end}"/>
-            <h:outputLabel value="Step" for="step"/>
-            <h:inputText id="step" value="#{functionBean.parameters.step}"/>
-            <h:commandButton value="Calculate" action="#{functionBean.calculate()}"/>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Start (min 0.2)" for="start"/>
+                <h:inputText id="start" value="#{functionBean.parameters.start}"/>
+                <h:outputLabel value="End (max 2.8)" for="end"/>
+                <h:inputText id="end" value="#{functionBean.parameters.end}"/>
+                <h:outputLabel value="Step" for="step"/>
+                <h:inputText id="step" value="#{functionBean.parameters.step}"/>
+                <h:commandButton value="Calculate" action="#{functionBean.calculate()}"/>
+            </h:panelGrid>
         </h:form>
     </h:body>
 </f:view>
